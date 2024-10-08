@@ -6,7 +6,8 @@ from fastapi_users import fastapi_users
 from fastapi_users import FastAPIUsers
 from auth.auth import auth_backend
 from auth.shemes import UserRead, UserCreate
-from auth.manager import get_user_manager, User
+from auth.manager import get_user_manager
+from auth.database_x import User
 
 app = FastAPI(
     title="Trading App"
