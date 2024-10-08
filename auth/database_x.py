@@ -18,7 +18,7 @@ class User(SQLAlchemyBaseUserTable[int], Base):
     email = Column("email", String, nullable=False)
     username = Column("username", String, nullable=False)
     registared_at = Column("registered_at", TIMESTAMP, default=datetime.utcnow)
-    role_id = Column("role_id", Integer, ForeignKey(role.c.id))
+    role_id = Column("role_id", Integer, ForeignKey(role.c.id), nullable=True)
 
 
 engine = create_async_engine(DATABASE_URL)
